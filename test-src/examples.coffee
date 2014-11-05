@@ -27,9 +27,10 @@ console.log('#### StringBuffer')
 console.log('')
 console.log('Construct a StringBuffer, optionally provide an initial String value.')
 console.log('')
-console.log('Methods val(), max_pulse(), add(), subtract() and training_zones() are available.')
+console.log('Methods add(), add_line(), newline(), to_string(), as_lines(), and is_empty() are available.')
 
-sb = sb.StringBuffer()
+
+sb = new sb.StringBuffer()
 sb.is_empty()
 sb.add_line("Somewhere ages and ages hence:")
 sb.add("Two roads diverged in a wood, ")
@@ -47,7 +48,8 @@ console.log(sb.to_string())
 # I took the one less traveled by,
 # And that has made all the difference.
 
-console.log('a57 = new sb.Age("57.1")')
+console.log('sb = new sb.StringBuffer()')
+console.log('sb.is_empty()  ->  ' + sb.is_empty())
 console.log('sb.to_string()  ->  ' + sb.to_string())
 console.log('```')
 console.log('')

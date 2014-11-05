@@ -49,9 +49,9 @@ Copyright 2014, Christopher Joakim, JoakimSoftware LLC <christopher.joakim@gmail
 
   console.log('');
 
-  console.log('Methods val(), max_pulse(), add(), subtract() and training_zones() are available.');
+  console.log('Methods add(), add_line(), newline(), to_string(), as_lines(), and is_empty() are available.');
 
-  sb = sb.StringBuffer();
+  sb = new sb.StringBuffer();
 
   sb.is_empty();
 
@@ -75,7 +75,9 @@ Copyright 2014, Christopher Joakim, JoakimSoftware LLC <christopher.joakim@gmail
 
   console.log(sb.to_string());
 
-  console.log('a57 = new sb.Age("57.1")');
+  console.log('sb = new sb.StringBuffer()');
+
+  console.log('sb.is_empty()  ->  ' + sb.is_empty());
 
   console.log('sb.to_string()  ->  ' + sb.to_string());
 
