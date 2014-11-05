@@ -1,0 +1,37 @@
+{
+  "name":    "sb-js",
+  "version": "0.0.1",
+  "description": "A Node.js library implementing a simple StringBuffer, much like the Java class.",
+  "homepage": "https://github.com/cjoakim/sb-js",
+  "main": "lib/string_buffer.js",
+  "author": {
+    "name": "Chris Joakim, JoakimSoftware LLC",
+    "url":  "http://www.chrisjoakim.com"
+  },
+  "licenses": [
+    {
+      "type": "ISC",
+      "url":  "https://github.com/cjoakim/sb-js/blob/master/LICENSE"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url":  "https://github.com/cjoakim/sb-js"
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+    "grunt": "~0.4.5",
+    "grunt-contrib-coffee": "~0.12.0",
+    "grunt-contrib-jasmine": "~0.8.1"
+  },
+  "scripts": {
+    "test": "grunt jasmine"
+  },
+  "keywords": [
+    "string",
+    "buffer",
+    "stringbuffer",
+    "stringbuilder"
+  ]
+}
