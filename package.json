@@ -1,6 +1,6 @@
 {
   "name":    "sb-js",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "A Node.js library implementing a simple StringBuffer, much like the Java class.",
   "homepage": "https://github.com/cjoakim/sb-js",
   "main": "lib/string_buffer.js",

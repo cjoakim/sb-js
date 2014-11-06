@@ -6,6 +6,8 @@ root = exports ? this
 
 class StringBuffer
 
+  @VERSION: '0.1.0'
+
   constructor: (s)->
     @data = []
     if s

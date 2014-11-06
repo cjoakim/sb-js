@@ -7,7 +7,7 @@ Copyright 2014, Christopher Joakim, JoakimSoftware LLC <christopher.joakim@gmail
  */
 
 (function() {
-  var sb;
+  var b, b2, sb;
 
   sb = require("./lib/string_buffer.js");
 
@@ -53,39 +53,61 @@ Copyright 2014, Christopher Joakim, JoakimSoftware LLC <christopher.joakim@gmail
 
   console.log('```');
 
-  sb = new sb.StringBuffer();
+  b = new sb.StringBuffer();
 
-  console.log('sb = new sb.StringBuffer()');
+  console.log('b = new sb.StringBuffer()');
 
-  console.log('sb.is_empty()  -> ' + sb.is_empty());
+  console.log('b.is_empty()  -> ' + b.is_empty());
 
-  sb.add("one");
-
-  console.log('sb.add("line one")');
-
-  console.log('sb.is_empty()  -> ' + sb.is_empty());
-
-  sb.add(",two");
-
-  console.log('sb.add(",two")');
-
-  console.log('sb.to_string()  -> "' + sb.to_string() + '"');
-
-  sb.newline();
-
-  console.log('sb.newline()');
-
-  sb.add_line("three");
-
-  console.log('sb.add_line("three")');
+  console.log('b.to_string() -> "' + b.to_string() + '"');
 
   console.log('');
 
-  console.log('sb.to_string()  -> "' + sb.to_string() + '"');
+  b.add("one");
+
+  console.log('b.add("one")');
+
+  console.log('b.is_empty()  -> ' + b.is_empty());
 
   console.log('');
 
-  console.log('sb.as_lines()  -> "' + JSON.stringify(sb.as_lines()) + '"');
+  b.add(",two");
+
+  console.log('b.add(",two")');
+
+  console.log('b.to_string() -> "' + b.to_string() + '"');
+
+  console.log('');
+
+  b.newline();
+
+  console.log('b.newline()');
+
+  b.add_line("three");
+
+  console.log('b.add_line("three")');
+
+  console.log('');
+
+  console.log('b.to_string() -> "' + b.to_string() + '"');
+
+  console.log('b.as_lines()  -> "' + JSON.stringify(b.as_lines()) + '"');
+
+  console.log('');
+
+  b2 = new sb.StringBuffer("hello world");
+
+  console.log('b2 = new sb.StringBuffer("hello world")');
+
+  console.log('b2.is_empty()  ->  ' + b2.is_empty());
+
+  console.log('b2.to_string() -> "' + b2.to_string() + '"');
+
+  console.log('b2.as_lines()  -> "' + JSON.stringify(b2.as_lines()) + '"');
+
+  console.log('');
+
+  console.log('sb.StringBuffer.VERSION  -> ' + sb.StringBuffer.VERSION);
 
   console.log('```');
 

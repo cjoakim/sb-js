@@ -5,9 +5,13 @@ Copyright 2014, Christopher Joakim, JoakimSoftware LLC <christopher.joakim@gmail
 
 (function() {
   describe('StringBuffer', function() {
+    it('defines VERSION', function() {
+      return expect(StringBuffer.VERSION).toBe('0.1.0');
+    });
     it("should construct an empty instance with no constructor argument", function() {
       var sb;
       sb = new StringBuffer();
+      expect(sb.to_string()).toEqual('');
       expect(sb.is_empty()).toEqual(true);
       expect(sb.to_string()).toEqual('');
       sb.add('x');

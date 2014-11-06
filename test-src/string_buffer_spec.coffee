@@ -4,8 +4,12 @@ Copyright 2014, Christopher Joakim, JoakimSoftware LLC <christopher.joakim@gmail
 
 describe 'StringBuffer', ->
 
+  it 'defines VERSION', ->
+    expect(StringBuffer.VERSION).toBe('0.1.0')
+
   it "should construct an empty instance with no constructor argument", ->
     sb = new StringBuffer()
+    expect(sb.to_string()).toEqual('')
     expect(sb.is_empty()).toEqual(true)
     expect(sb.to_string()).toEqual('')
     sb.add('x')
