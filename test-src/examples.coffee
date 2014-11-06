@@ -19,7 +19,7 @@ console.log('```')
 console.log('')
 console.log('Require sb-js in your code:')
 console.log('```')
-console.log('sb = require(sb-js")')
+console.log('sb = require("sb-js")')
 console.log('```')
 console.log('')
 
@@ -29,27 +29,28 @@ console.log('Construct a StringBuffer, optionally provide an initial String valu
 console.log('')
 console.log('Methods add(), add_line(), newline(), to_string(), as_lines(), and is_empty() are available.')
 
-
+console.log('```')
 sb = new sb.StringBuffer()
-sb.is_empty()
-sb.add_line("Somewhere ages and ages hence:")
-sb.add("Two roads diverged in a wood, ")
-sb.add("and I -")
-sb.newline()
-sb.add_line("I took the one less traveled by,")
-sb.add("And that has made")
-sb.add(" all the difference.")
-sb.newline()
-poem = sb.to_string()
-
-console.log(sb.to_string())
-# Somewhere ages and ages hence:
-# Two roads diverged in a wood, and I-
-# I took the one less traveled by,
-# And that has made all the difference.
-
 console.log('sb = new sb.StringBuffer()')
-console.log('sb.is_empty()  ->  ' + sb.is_empty())
-console.log('sb.to_string()  ->  ' + sb.to_string())
+console.log('sb.is_empty()  -> ' + sb.is_empty())
+
+sb.add("one")
+console.log('sb.add("line one")')
+console.log('sb.is_empty()  -> ' + sb.is_empty())
+
+sb.add(",two")
+console.log('sb.add(",two")')
+console.log('sb.to_string()  -> "' + sb.to_string() + '"')
+
+sb.newline()
+console.log('sb.newline()')
+
+sb.add_line("three")
+console.log('sb.add_line("three")')
+console.log('')
+console.log('sb.to_string()  -> "' + sb.to_string() + '"')
+console.log('')
+console.log('sb.as_lines()  -> "' + JSON.stringify(sb.as_lines()) + '"')
+
 console.log('```')
 console.log('')

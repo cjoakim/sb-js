@@ -1,5 +1,6 @@
-
-# See https://www.packtpub.com/sites/default/files/downloads/7204OS_The_Future_Jasmine_2_0.pdf
+###
+Copyright 2014, Christopher Joakim, JoakimSoftware LLC <christopher.joakim@gmail.com>
+###
 
 beforeEach ->
 
