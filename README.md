@@ -20,6 +20,8 @@ Require sb-js in your code:
 sb = require("sb-js")
 ```
 
+Note: this library is implemented with CoffeeScript, and these examples are also in CoffeeScript.
+
 #### StringBuffer
 
 Construct a StringBuffer, optionally provide an initial String value.

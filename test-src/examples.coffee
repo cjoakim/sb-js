@@ -22,6 +22,8 @@ console.log('```')
 console.log('sb = require("sb-js")')
 console.log('```')
 console.log('')
+console.log('Note: this library is implemented with CoffeeScript, and these examples are also in CoffeeScript.')
+console.log('')
 
 console.log('#### StringBuffer')
 console.log('')
