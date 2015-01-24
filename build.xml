@@ -37,7 +37,7 @@
         </description>
 
         <tstamp>
-            <format property="_backupTstamp" pattern="yyyyMMdd_HHmm" />
+            <format property="_backupTstamp" pattern="yyyyMMdd-HHmm" />
         </tstamp>
 
         <property name="_zipFilename" value="${_backupDir}/${_projectName}-${_backupTstamp}.zip" />
