@@ -3,13 +3,13 @@
 This purpose of this file is to test the generated sb.js file, outside of jasmine,
 before deployment to npm.  It (accurately) generates Examples section of the README.md
 file based on actual working code and output.
-Copyright 2014, Christopher Joakim, JoakimSoftware LLC <christopher.joakim@gmail.com>
+Copyright 2015, Christopher Joakim, JoakimSoftware LLC <christopher.joakim@gmail.com>
  */
 
 (function() {
-  var b, b2, sb;
+  var StringBuffer, sb, sb2;
 
-  sb = require("./lib/string_buffer.js");
+  StringBuffer = require("./lib/string_buffer.js").StringBuffer;
 
   console.log('');
 
@@ -35,7 +35,7 @@ Copyright 2014, Christopher Joakim, JoakimSoftware LLC <christopher.joakim@gmail
 
   console.log('```');
 
-  console.log('sb = require("sb-js")');
+  console.log('StringBuffer = require("sb-js").StringBuffer');
 
   console.log('```');
 
@@ -57,61 +57,63 @@ Copyright 2014, Christopher Joakim, JoakimSoftware LLC <christopher.joakim@gmail
 
   console.log('```');
 
-  b = new sb.StringBuffer();
+  sb = new StringBuffer();
 
-  console.log('b = new sb.StringBuffer()');
+  console.log('sb = new StringBuffer()');
 
-  console.log('b.is_empty()  -> ' + b.is_empty());
+  console.log('sb.is_empty()  -> ' + sb.is_empty());
 
-  console.log('b.to_string() -> "' + b.to_string() + '"');
-
-  console.log('');
-
-  b.add("one");
-
-  console.log('b.add("one")');
-
-  console.log('b.is_empty()  -> ' + b.is_empty());
+  console.log('sb.to_string() -> "' + sb.to_string() + '"');
 
   console.log('');
 
-  b.add(",two");
+  sb.add("one");
 
-  console.log('b.add(",two")');
+  console.log('sb.add("one")');
 
-  console.log('b.to_string() -> "' + b.to_string() + '"');
-
-  console.log('');
-
-  b.newline();
-
-  console.log('b.newline()');
-
-  b.add_line("three");
-
-  console.log('b.add_line("three")');
+  console.log('sb.is_empty()  -> ' + sb.is_empty());
 
   console.log('');
 
-  console.log('b.to_string() -> "' + b.to_string() + '"');
+  sb.add(",two");
 
-  console.log('b.as_lines()  -> "' + JSON.stringify(b.as_lines()) + '"');
+  console.log('sb.add(",two")');
 
-  console.log('');
-
-  b2 = new sb.StringBuffer("hello world");
-
-  console.log('b2 = new sb.StringBuffer("hello world")');
-
-  console.log('b2.is_empty()  ->  ' + b2.is_empty());
-
-  console.log('b2.to_string() -> "' + b2.to_string() + '"');
-
-  console.log('b2.as_lines()  -> "' + JSON.stringify(b2.as_lines()) + '"');
+  console.log('sb.to_string() -> "' + sb.to_string() + '"');
 
   console.log('');
 
-  console.log('sb.StringBuffer.VERSION  -> ' + sb.StringBuffer.VERSION);
+  sb.newline();
+
+  console.log('sb.newline()');
+
+  sb.add_line("three");
+
+  console.log('sb.add_line("three")');
+
+  console.log('');
+
+  console.log('sb.to_string() -> "' + sb.to_string() + '"');
+
+  console.log('sb.as_lines()  -> "' + JSON.stringify(sb.as_lines()) + '"');
+
+  console.log('');
+
+  sb2 = new StringBuffer("  hello world  ");
+
+  console.log('sb2 = new StringBuffer("  hello world  ")');
+
+  console.log('sb2.is_empty()  ->  ' + sb2.is_empty());
+
+  console.log('sb2.as_lines()  -> "' + JSON.stringify(sb2.as_lines()) + '"');
+
+  console.log('sb2.to_string() -> "' + sb2.to_string() + '"');
+
+  console.log('sb2.to_string(true) -> "' + sb2.to_string(true) + '"');
+
+  console.log('');
+
+  console.log('StringBuffer.VERSION  -> ' + StringBuffer.VERSION);
 
   console.log('```');
 

@@ -2,7 +2,7 @@
 
     <description>
         Ant script to create a zip file backup of this project.
-        Chris Joakim, 2014/11/05
+        Chris Joakim, 2015/01/24
     </description>
 
     <!-- These are the only properties you should have to change.  -->

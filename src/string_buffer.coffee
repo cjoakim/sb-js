@@ -1,12 +1,13 @@
 ###
-Copyright 2014, Christopher Joakim, JoakimSoftware LLC <christopher.joakim@gmail.com>
+Copyright 2015, Christopher Joakim, JoakimSoftware LLC <christopher.joakim@gmail.com>
 ###
 
-root = exports ? this
+os = require('os')
+
 
 class StringBuffer
 
-  @VERSION: '0.1.0'
+  @VERSION: '0.1.1'
 
   constructor: (s)->
     @data = []
@@ -18,10 +19,10 @@ class StringBuffer
 
   add_line: (s) ->
     @data.push(s)
-    @data.push("\n")
+    @data.push(os.EOL)
 
   newline:  ->
-    @data.push("\n")
+    @data.push(os.EOL)
 
   to_string: (trim=false) ->
     if trim
@@ -30,9 +31,11 @@ class StringBuffer
       @data.join('')
 
   as_lines: ->
-    this.to_string().split("\n")
+    this.to_string().split(os.EOL)
 
   is_empty: ->
     this.data.length == 0
 
+
+root = exports ? this
 root.StringBuffer = StringBuffer

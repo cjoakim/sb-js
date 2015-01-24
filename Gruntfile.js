@@ -5,20 +5,25 @@ module.exports = function (grunt) {
     coffee: {
       compile: {
         options: {
-          join: true
+          join: false
         },
         files: {
-          'lib/string_buffer.js':       ['src/*.coffee'],
-          'test/string_buffer_spec.js': ['test-src/string_buffer_spec.coffee'],
-          'examples.js':                ['test-src/examples.coffee']
+          'examples.js':                ['src/examples.coffee'],
+          'lib/string_buffer.js':       ['src/string_buffer.coffee'],
+          'test/string_buffer_test.js': ['src/test/string_buffer_test.coffee']
         }
       }
     },
 
-    jasmine : {
-      src : 'lib/string_buffer.js',
-      options : {
-        specs : 'test/*.js'
+    mocha_istanbul: {
+      coverage: {
+        src: 'test', // the folder, not the files
+        options: {
+          coverageFolder: 'coverage',
+          mask: '*_test.js',
+          root: '/',
+          mochaOptions: { slow: 200 }
+        }
       }
     }
 
@@ -26,6 +31,7 @@ module.exports = function (grunt) {
 
   grunt.initConfig(config);
   grunt.loadNpmTasks('grunt-contrib-coffee');
-  grunt.loadNpmTasks('grunt-contrib-jasmine');
-  grunt.registerTask('default', [ 'coffee', 'jasmine' ]);
+  grunt.loadNpmTasks('grunt-mocha-istanbul');
+  grunt.registerTask('test', [ 'mocha_istanbul:coverage' ]);
+  grunt.registerTask('default', [ 'coffee' ]);
 };
