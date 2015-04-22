@@ -2,6 +2,20 @@ module.exports = function (grunt) {
 
   var config = {
 
+    typescript: {
+      base: {
+        src: ['src/**/*.ts'],
+        dest: 'lib',
+        options: {
+          module: 'commonjs', // commonjs or amd
+          target: 'es5',      // es3 or es5
+          basePath: 'src',
+          sourceMap: true,
+          declaration: true
+        }
+      }
+    },
+
     coffee: {
       compile: {
         options: {
@@ -9,7 +23,6 @@ module.exports = function (grunt) {
         },
         files: {
           'examples.js':                ['src/examples.coffee'],
-          'lib/string_buffer.js':       ['src/string_buffer.coffee'],
           'test/string_buffer_test.js': ['src/test/string_buffer_test.coffee']
         }
       }
@@ -30,8 +43,9 @@ module.exports = function (grunt) {
   };
 
   grunt.initConfig(config);
+  grunt.loadNpmTasks('grunt-typescript');
   grunt.loadNpmTasks('grunt-contrib-coffee');
   grunt.loadNpmTasks('grunt-mocha-istanbul');
   grunt.registerTask('test', [ 'mocha_istanbul:coverage' ]);
-  grunt.registerTask('default', [ 'coffee' ]);
+  grunt.registerTask('default', [ 'coffee', 'typescript' ]);
 };

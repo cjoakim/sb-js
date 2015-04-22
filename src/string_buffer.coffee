@@ -1,5 +1,5 @@
 ###
-Copyright 2015, Christopher Joakim, JoakimSoftware LLC <christopher.joakim@gmail.com>
+Copyright 2015, Christopher Joakim <christopher.joakim@gmail.com>
 ###
 
 os = require('os')
