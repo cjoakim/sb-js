@@ -41,7 +41,7 @@ Copyright 2015, Christopher Joakim <christopher.joakim@gmail.com>
 
   console.log('');
 
-  console.log('Note: this library is implemented with CoffeeScript, and these examples are also in CoffeeScript.');
+  console.log('Note: this library is now implemented in TypeScript, but these examples are in CoffeeScript.');
 
   console.log('');
 
@@ -53,7 +53,9 @@ Copyright 2015, Christopher Joakim <christopher.joakim@gmail.com>
 
   console.log('');
 
-  console.log('Methods add(), add_line(), newline(), to_string(), as_lines(), and is_empty() are available.');
+  console.log('Original "snake_case" methods add(), add_line(), newline(), to_string(), as_lines(), and is_empty() are available.');
+
+  console.log('Corresponding new "camelCase" methods addLine(), newLine(), toString(), asLines(), and isEmpty() are also available.');
 
   console.log('```');
 
@@ -63,7 +65,11 @@ Copyright 2015, Christopher Joakim <christopher.joakim@gmail.com>
 
   console.log('sb.is_empty()  -> ' + sb.is_empty());
 
+  console.log('sb.isEmpty()  -> ' + sb.isEmpty());
+
   console.log('sb.to_string() -> "' + sb.to_string() + '"');
+
+  console.log('sb.toString() -> "' + sb.toString() + '"');
 
   console.log('');
 
@@ -91,11 +97,17 @@ Copyright 2015, Christopher Joakim <christopher.joakim@gmail.com>
 
   console.log('sb.add_line("three")');
 
+  console.log('sb.add_line(null)      // null values ignored');
+
+  console.log('sb.addLine(undefined)  // undefined values ignored');
+
   console.log('');
 
   console.log('sb.to_string() -> "' + sb.to_string() + '"');
 
   console.log('sb.as_lines()  -> "' + JSON.stringify(sb.as_lines()) + '"');
+
+  console.log('sb.asLines()  -> "' + JSON.stringify(sb.asLines()) + '"');
 
   console.log('');
 
