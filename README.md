@@ -22,6 +22,8 @@ StringBuffer = require("sb-js").StringBuffer
 ```
 
 Note: this library is now implemented in TypeScript, but these examples are in CoffeeScript.
+For users of TypeScript, see the deslaration file for this library at:
+https://github.com/cjoakim/sb-js/blob/master/lib/sb-js.d.ts
 
 #### StringBuffer
 
@@ -59,7 +61,7 @@ sb2.as_lines()  -> "["  hello world  "]"
 sb2.to_string() -> "  hello world  "
 sb2.to_string(true) -> "hello world"
 
-StringBuffer.VERSION  -> 0.2.0
+StringBuffer.VERSION  -> 0.3.0
 ```
 
 ### Test Results
@@ -82,7 +84,7 @@ Running "mocha_istanbul:coverage" (mocha_istanbul) task
       ✓ should optionally trim the result of toString
 
 
-  9 passing (9ms)
+  9 passing (10ms)
 
 =============================================================================
 Writing coverage object [/Users/cjoakim/github/sb-js/coverage/coverage.json]
