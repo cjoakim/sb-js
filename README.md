@@ -22,7 +22,8 @@ StringBuffer = require("sb-js").StringBuffer
 ```
 
 Note: this library is now implemented in TypeScript, but these examples are in CoffeeScript.
-For users of TypeScript, see the deslaration file for this library at:
+For users of TypeScript, see the declaration file for this library at:
+
 https://github.com/cjoakim/sb-js/blob/master/lib/sb-js.d.ts
 
 #### StringBuffer
