@@ -2,13 +2,13 @@
 Copyright 2015, Christopher Joakim <christopher.joakim@gmail.com>
 ###
 
-# grunt ; mocha test/string_buffer_test.js
+# grunt ; mocha test/sb_js_test.js
 
 assert = require("assert")
 should = require('should')
 os     = require('os')
 
-StringBuffer = require('../lib/string_buffer.js').StringBuffer
+StringBuffer = require('../lib/sb-js.js').StringBuffer
 
 
 describe 'StringBuffer', ->
@@ -16,7 +16,7 @@ describe 'StringBuffer', ->
   describe 'VERSION number is exposed by the API', ->
 
     it 'defines VERSION', ->
-      (StringBuffer.VERSION).should.eql('0.2.0')
+      (StringBuffer.VERSION).should.eql('0.3.0')
 
   describe 'original snake_case API', ->
 

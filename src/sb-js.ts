@@ -9,7 +9,7 @@ import os = require('os');
 export class StringBuffer {
 
     // class variables
-    static VERSION : string = '0.2.0';
+    static VERSION : string = '0.3.0';
 
     // instance variables
     data : string[] = [];

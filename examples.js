@@ -9,7 +9,7 @@ Copyright 2015, Christopher Joakim <christopher.joakim@gmail.com>
 (function() {
   var StringBuffer, sb, sb2;
 
-  StringBuffer = require("./lib/string_buffer.js").StringBuffer;
+  StringBuffer = require("./lib/sb-js.js").StringBuffer;
 
   console.log('');
 

@@ -5,7 +5,7 @@ file based on actual working code and output.
 Copyright 2015, Christopher Joakim <christopher.joakim@gmail.com>
 ###
 
-StringBuffer = require("./lib/string_buffer.js").StringBuffer
+StringBuffer = require("./lib/sb-js.js").StringBuffer
 
 console.log('')
 console.log('### Examples')

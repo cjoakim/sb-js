@@ -22,8 +22,8 @@ module.exports = function (grunt) {
           join: false
         },
         files: {
-          'examples.js':                ['src/examples.coffee'],
-          'test/string_buffer_test.js': ['src/test/string_buffer_test.coffee']
+          'examples.js':          ['src/examples.coffee'],
+          'test/sb_js_test.js':   ['src/test/sb_js_test.coffee']
         }
       }
     },

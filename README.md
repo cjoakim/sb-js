@@ -62,8 +62,44 @@ sb2.to_string(true) -> "hello world"
 StringBuffer.VERSION  -> 0.2.0
 ```
 
+### Test Results
+```
+Running "mocha_istanbul:coverage" (mocha_istanbul) task
+
+
+  StringBuffer
+    VERSION number is exposed by the API
+      ✓ defines VERSION
+    original snake_case API
+      ✓ should construct an empty instance with no constructor argument
+      ✓ should construct a populated instance with a constructor String argument
+      ✓ should implement method 'as_lines'
+      ✓ should optionally trim the result of to_string
+    new camelCase API
+      ✓ should construct an empty instance with no constructor argument
+      ✓ should construct a populated instance with a constructor String argument
+      ✓ should implement method 'asLines'
+      ✓ should optionally trim the result of toString
+
+
+  9 passing (9ms)
+
+=============================================================================
+Writing coverage object [/Users/cjoakim/github/sb-js/coverage/coverage.json]
+Writing coverage reports at [/Users/cjoakim/github/sb-js/coverage]
+=============================================================================
+
+=============================== Coverage summary ===============================
+Statements   : 100% ( 46/46 )
+Branches     : 92.86% ( 13/14 )
+Functions    : 100% ( 14/14 )
+Lines        : 100% ( 46/46 )
+================================================================================
+```
+
 ### Release History
 
+* 2015-05-02   v0.3.0  Renamed the source to sb-js so as to generate file 'lib/sb-js.d.ts'.
 * 2015-04-22   v0.2.0  Implementation language is now TypeScript.  API expanded to both snake_case and camelCase.
 * 2015-01-24   v0.1.1  Changed line endings from "\n" to os.EOL.  Replaced jasmine with mocha and istanbul.
 * 2014-11-06   v0.1.0  Initial working version; implemented in CoffeeScript.
